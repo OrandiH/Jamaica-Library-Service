@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="starter">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -32,15 +32,33 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-controller="MyController">
 
-    <ion-pane>
-      <ion-header-bar class="bar bar-header bar-royal">
-      <button class="button icon ion-navicon"></button>
-        <h1 class="title">JLS HOLLA</h1>
-        <button class="button icon ion-compass"></button>
-      </ion-header-bar>
+    <ion-pane >
+<ion-side-menus>
+		<ion-side-menu-content>
 
+    <div class="bar bar-header bar-royal">
+	   			<button menu-toggle = "left" ng-click="toggleLeft()" class="button icon ion-navicon"></button>
+     
+   
+ <h1 class="title">JLS HOLLA</h1>
+ <button class="button icon ion-compass"></button>
+   </div>
+   </ion-side-menu-content>
+   		<ion-side-menu side ="left">
+   				<ion-list>
+   				<ion-item>Home</ion-item>
+   				</ion-list>
+   		</ion-side-menu>
+
+   	</ion-side-menus>
+ 
+
+
+<div class="bar bar-subheader bar-positive">
+   <h2 class="title">Feed</h2>
+</div>
 
       <div class="tabs tabs-icon-top">
       	<a class="tab-item">
@@ -56,20 +74,69 @@
 			<i class="icon ion-gear-a"></i>
 			Settings
 		</a>  	
-
+		
+	
       </div>
-       <ion-content>
+       <ion-content class="padding has-header has-subheader">
+       
       	<div class="card">
-      		<div class="item item-divider">
-      		Notifications
+
+      		<div class="item item-divider item-text-wrap item-thumbnail-top">
+      			<img src="img/kingstonlibrary.jpg">
+      		<h2>History of the Kingston Parish Library</h2>
       		<div class="item item-text-wrap">
-      			<p>This is whats happpening.Lots more will be taking place in the library shortly.Check it all out</p>
+      			<p> It also operates four hundred and eleven (411) mobile library stops as well as offers access points for twenty-two (22) special categories of persons.
+      			<br/>
+				</p>
+      		</div>
+      		<div class="item item-divider item-text-wrap item-thumbnail-top">
+      			<img src="img/techfest.jpg">
+      			<center><h2>Jamaica Library Service Techfest</h2></center>
+      			<div class="item item-body item-text-wrap">
+					<p>
+						The JLS Tech fest is a global libraries ICT project that will showcase different projects related to the library. The winners of the recent Mobile App Competiton will also be announced.
+					</p>      				
+      			</div>
+      		</div>
+      			
+
+      			<div class="item item-divider item-text-wrap item-thumbnail-top">
+      				<img src="img/appguidelines.jpg">
+      			<h2>Jamaica Library Service App Competition Guidelines</h2>
+      			<div class="item item-body item-text-wrap">
+					<p>
+						These are the guidelines for the ongoing app competiton hosted by the Jamaica Library Service. Please go to our <a href="https://www.facebook.com/jamaicalibraryservice/photos/a.1518421435101642.1073741828.1485475855062867/1787696394840810/?type=3&theater">Facebook</a> page for more information.
+					</p>      				
+      			</div>
       		</div>
 
+      			<div class="item item-divider item-text-wrap item-thumbnail-top">
+      				<img src="img/closed.jpg">
+      				<h3>Closure of all libraries</h3>
+      			<div class="item item-body item-text-wrap">
+					<p>
+						Due to the passage of Hurricane Matthew all public libraries will be closed on Monday October 3, 2016. Please be safe & we will update you on normal operations momentarily.
+					</p>      				
+      			</div>
+      		</div>
+
+      			<div class="item item-divider item-text-wrap item-thumbnail-top">
+      				<img src="img/app.png">
+      			Jamaica Library Service Mobile App Competiton
+
+      			<div class="item item-body item-text-wrap">
+					<p>
+						The Jamaica Library service is proud to announce a mobile app competition. Please go to our main <a href="http://www.jls.gov.jm/ ">website</a> for more information. 
+					</p>      				
+      			</div>
+      		</div>
       		</div>
       	</div>
-      	
+     
+
+
       </ion-content>
+
 
     </ion-pane>
   </body>
