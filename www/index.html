@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="starter">
+<html >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -31,55 +31,41 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+
   </head>
-  <body ng-controller="MyController">
 
-    <ion-pane >
-<ion-side-menus>
-		<ion-side-menu-content>
-
-    <div class="bar bar-header bar-royal">
-	   			<button menu-toggle = "left" ng-click="toggleLeft()" class="button icon ion-navicon"></button>
-     
-   
- <h1 class="title">JLS HOLLA</h1>
- <button class="button icon ion-compass"></button>
-   </div>
-   </ion-side-menu-content>
-   		<ion-side-menu side ="left">
-   				<ion-list>
-   				<ion-item>Home</ion-item>
-   				</ion-list>
-   		</ion-side-menu>
-
-   	</ion-side-menus>
- 
-
-
-<div class="bar bar-subheader bar-positive">
-   <h2 class="title">Feed</h2>
-</div>
-
-      <div class="tabs tabs-icon-top">
-      	<a class="tab-item">
-      		<i class="icon ion-home"></i>
-      		Home
-      	</a>
-		<a class="tab-item">
-			<i class="icon ion-information">	
-			</i>
-			About
-		</a>    
-		<a class="tab-item">
-			<i class="icon ion-gear-a"></i>
-			Settings
-		</a>  	
-		
-	
-      </div>
-       <ion-content class="padding has-header has-subheader">
+  <body ng-app="starter" ng-controller="MainCtrl">
+  	<!--Center content-->
+    <ion-side-menus>
+    <ion-pane>
+    		<ion-side-menu-content>
+  		    <div class="bar bar-header bar-royal">
+	    	    <button menu-toggle="left"class="button     icon ion-navicon"></button>  
+ 		      	<h1 class="title">JLS HOLLA</h1>
+        	</div>
+          
+			<div class="bar bar-subheader bar-positive">
+   				<h2 class="title">Feed</h2>
+			</div>
+<!--
+  		    <div class="tabs tabs-icon-top">
+      				<a class="tab-item">
+      			<i class="icon ion-home"></i>
+      						Home
+      			</a>
+				<a class="tab-item">
+					<i class="icon ion-information"></i>
+							About
+				</a>    
+				<a class="tab-item">
+				<i class="icon ion-gear-a"></i>
+				Settings
+			</a>  	
+	 		</div>
+-->
+       <ion-content scroll ="true" class="padding has-header has-subheader">
        
-      	<div class="card">
+      	<div class="content card list">
 
       		<div class="item item-divider item-text-wrap item-thumbnail-top">
       			<img src="img/kingstonlibrary.jpg">
@@ -98,8 +84,6 @@
 					</p>      				
       			</div>
       		</div>
-      			
-
       			<div class="item item-divider item-text-wrap item-thumbnail-top">
       				<img src="img/appguidelines.jpg">
       			<h2>Jamaica Library Service App Competition Guidelines</h2>
@@ -132,12 +116,20 @@
       		</div>
       		</div>
       	</div>
-     
-
-
       </ion-content>
-
-
+      </ion-side-menu-content>
+    <ion-side-menu side="left">
+      <header class="bar bar-header bar-positive">
+      <div class="title">Social links</div>
+      </header>
+        <ul class="list list-inset has-header">
+          <li>Facebook</li>
+          <li>Twitter</li>
+        </ul>
+        </div>
+     
+    </ion-side-menu >
+    </ion-side-menus>
     </ion-pane>
   </body>
 </html>
