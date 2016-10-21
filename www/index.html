@@ -38,35 +38,19 @@
   	<!--Center content-->
     <ion-side-menus>
     <ion-pane>
+    <!--Side menu stuff-->
     		<ion-side-menu-content>
   		    <div class="bar bar-header bar-royal">
 	    	    <button menu-toggle="left"class="button     icon ion-navicon"></button>  
  		      	<h1 class="title">JLS HOLLA</h1>
         	</div>
-          
-			<div class="bar bar-subheader bar-positive">
-   				<h2 class="title">Feed</h2>
-			</div>
-<!--
-  		    <div class="tabs tabs-icon-top">
-      				<a class="tab-item">
-      			<i class="icon ion-home"></i>
-      						Home
-      			</a>
-				<a class="tab-item">
-					<i class="icon ion-information"></i>
-							About
-				</a>    
-				<a class="tab-item">
-				<i class="icon ion-gear-a"></i>
-				Settings
-			</a>  	
-	 		</div>
--->
+<!--Main content of app-->
        <ion-content scroll ="true" class="padding has-header has-subheader">
-       
-      	<div class="content card list">
+        <ion-refresher pulling-text ="Refresh...." on-refresh = "refreshNow();">
+        </ion-refresher>
 
+      	<div class="content card list">
+            
       		<div class="item item-divider item-text-wrap item-thumbnail-top">
       			<img src="img/kingstonlibrary.jpg">
       		<h2>History of the Kingston Parish Library</h2>
@@ -111,7 +95,8 @@
       			<div class="item item-body item-text-wrap">
 					<p>
 						The Jamaica Library service is proud to announce a mobile app competition. Please go to our main <a href="http://www.jls.gov.jm/ ">website</a> for more information. 
-					</p>      				
+					</p>     
+        				
       			</div>
       		</div>
       		</div>
@@ -122,9 +107,11 @@
       <header class="bar bar-header bar-positive">
       <div class="title">Social links</div>
       </header>
-        <ul class="list list-inset has-header">
-          <li>Facebook</li>
-          <li>Twitter</li>
+        <ul class=" card list list-inset has-header">
+        <button onclick="OpenBrowser1();"><a  href target="_blank" = "https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867" class="icon ion-social-facebook">Facebook</a></button>
+        <br/>
+        <br/>
+        <button onclick="OpenBrowser2();"><a target = "_blank" href = "https://twitter.com/JLSEmpoweringJa" class="icon ion-social-twitter">Twitter</a></button>
         </ul>
         </div>
      

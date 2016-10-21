@@ -23,8 +23,32 @@ app.run(function($ionicPlatform) {
   });
 })
 
-app.controller('MainCtrl',function($scope,$ionicScrollDelegate){
+app.controller('MainCtrl',function($scope,$ionicScrollDelegate,$http){
   $scope.toggleLeft = function() {
       $ionicSideMenuDelegate.toggleLeft();
   };
+
+  $scope.refreshNow = function() {
+    $http.get('/fresh-items').success(function(freshItems){
+      scope.items = freshItems;
+    })
+    .finally(function(){
+      $scope.$broadcast('scroll.refreshComplete');
+    });
+  };
+
+  var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'yes'
+  };
+
+  $scope.openBrowser1 = function () {
+    cordova.InAppBrowser.open('https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867','_blank',options)
+  };
+
+    $scope.openBrowser2 = function () {
+    cordova.InAppBrowser.open('https://twitter.com/JLSEmpoweringJa','_blank',options)
+  };
+
 });
