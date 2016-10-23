@@ -37,18 +37,19 @@ app.controller('MainCtrl',function($scope,$ionicScrollDelegate,$http){
     });
   };
 
-  var options = {
-      location: 'yes',
-      clearcache: 'yes',
-      toolbar: 'yes'
-  };
+
 
   $scope.openBrowser1 = function () {
-    cordova.InAppBrowser.open('https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867','_blank',options)
+   window.open('https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867','_system','location=yes')
   };
 
     $scope.openBrowser2 = function () {
-    cordova.InAppBrowser.open('https://twitter.com/JLSEmpoweringJa','_blank',options)
+    window.open('https://twitter.com/JLSEmpoweringJa','_system','location=yes')
   };
+
+    $scope.openBrowser3 = function(){
+      window.open('http://jls.gov.jm/','_system','location=yes')
+  };
+    
 
 });

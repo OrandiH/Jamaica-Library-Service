@@ -104,17 +104,22 @@
       </ion-content>
       </ion-side-menu-content>
     <ion-side-menu side="left">
-      <header class="bar bar-header bar-positive">
-      <div class="title">Social links</div>
-      </header>
-        <ul class=" card list list-inset has-header">
-        <button onclick="OpenBrowser1();"><a  href target="_blank" = "https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867" class="icon ion-social-facebook">Facebook</a></button>
-        <br/>
-        <br/>
-        <button onclick="OpenBrowser2();"><a target = "_blank" href = "https://twitter.com/JLSEmpoweringJa" class="icon ion-social-twitter">Twitter</a></button>
-        </ul>
+     <header class="bar bar-header bar-positive"><h2 class="title">Social Links</h2></header>
+            <div class="menu-wrapper">
+            
+            <div class="item item-thumbnail-top padding has-header">
+                 <a ng-click="openBrowser1()" href="https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867"><img src="img/facebook.jpg"></a>
+                 Facebook
+          </div>
+            <div class="item item-thumbnail-top padding has-header">
+              <a ng-click="openBrowser2()" href="https://twitter.com/JLSEmpoweringJa"><img src="img/twitter.png"></a>
+              Twitter
+            </div>
+         <div class="item item-icon-right padding has-header">
+           <a ng-click="openBrowser3()" href="http://jls.gov.jm/"><i class="icon ion-home"></i></a>
+              <h3>Jamaica Libray Service</h3>
         </div>
-     
+      </div>
     </ion-side-menu >
     </ion-side-menus>
     </ion-pane>
