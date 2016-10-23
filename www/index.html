@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -29,6 +29,11 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <script src="lib/angular-websocket/angular-websocket.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-push/ionic-push.js"></script>
+
     <!-- your app's js -->
     <script src="js/app.js"></script>
 
@@ -41,12 +46,12 @@
     <!--Side menu stuff-->
     		<ion-side-menu-content>
   		    <div class="bar bar-header bar-royal">
-	    	    <button menu-toggle="left"class="button     icon ion-navicon"></button>  
+	    	    <button menu-toggle="left" class="button     icon ion-navicon"></button>  
  		      	<h1 class="title">JLS HOLLA</h1>
         	</div>
 <!--Main content of app-->
-       <ion-content scroll ="true" class="padding has-header has-subheader">
-        <ion-refresher pulling-text ="Refresh...." on-refresh = "refreshNow();">
+       <ion-content scroll="true" class="padding has-header has-subheader">
+        <ion-refresher pulling-text="Refresh...." on-refresh="refreshNow();">
         </ion-refresher>
 
       	<div class="content card list">
@@ -56,7 +61,7 @@
       		<h2>History of the Kingston Parish Library</h2>
       		<div class="item item-text-wrap">
       			<p> It also operates four hundred and eleven (411) mobile library stops as well as offers access points for twenty-two (22) special categories of persons.
-      			<br/>
+      			<br>
 				</p>
       		</div>
       		<div class="item item-divider item-text-wrap item-thumbnail-top">
@@ -73,7 +78,7 @@
       			<h2>Jamaica Library Service App Competition Guidelines</h2>
       			<div class="item item-body item-text-wrap">
 					<p>
-						These are the guidelines for the ongoing app competiton hosted by the Jamaica Library Service. Please go to our <a href="https://www.facebook.com/jamaicalibraryservice/photos/a.1518421435101642.1073741828.1485475855062867/1787696394840810/?type=3&theater">Facebook</a> page for more information.
+						These are the guidelines for the ongoing app competiton hosted by the Jamaica Library Service. Please go to our <a ng-click="openBrowser1()" href="https://www.facebook.com/jamaicalibraryservice/photos/a.1518421435101642.1073741828.1485475855062867/1787696394840810/?type=3&theater">Facebook</a> page for more information.
 					</p>      				
       			</div>
       		</div>
@@ -94,7 +99,7 @@
 
       			<div class="item item-body item-text-wrap">
 					<p>
-						The Jamaica Library service is proud to announce a mobile app competition. Please go to our main <a href="http://www.jls.gov.jm/ ">website</a> for more information. 
+						The Jamaica Library service is proud to announce a mobile app competition. Please go to our main <a ng-click="openBrowser3()" href="http://www.jls.gov.jm/ ">website</a> for more information. 
 					</p>     
         				
       			</div>
@@ -120,8 +125,8 @@
               <h3>Jamaica Libray Service</h3>
         </div>
       </div>
-    </ion-side-menu >
-    </ion-side-menus>
-    </ion-pane>
+    </ion-side-menu>
+    </ion-pane></ion-side-menus>
+    
   </body>
 </html>

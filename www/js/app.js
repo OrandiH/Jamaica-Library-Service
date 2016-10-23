@@ -38,7 +38,6 @@ app.controller('MainCtrl',function($scope,$ionicScrollDelegate,$http){
   };
 
 
-
   $scope.openBrowser1 = function () {
    window.open('https://www.facebook.com/pages/Jamaica-Library-Service/1485475855062867','_system','location=yes')
   };
